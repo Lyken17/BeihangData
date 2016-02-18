@@ -29,6 +29,7 @@ pictures are split into 9 groups, each group has 500 images. [google drive](http
     There is an `config.json`. Set `image_dir` and `label_dir` to your own directory.
 3. Run code
     ```python mark_data```
+4. Mark joint by order (press x, if this joint is invisible)
 
 ## Sample
 ![pic](https://cloud.githubusercontent.com/assets/7783214/13130814/d951852e-d59b-11e5-8451-bab13490edb1.png)
