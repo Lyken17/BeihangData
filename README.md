@@ -30,7 +30,10 @@ pictures are split into 9 groups, each group has 500 images. [google drive](http
 3. Run code
     ```python mark_data```
 
-## Tips
+## Sample
+![pic](http://i11.tietuku.com/05c454b68b94d738.png)
+
+## PS
 1. How to examine my label result?
     * To check all ```python draw_img```
     * To check specified picture

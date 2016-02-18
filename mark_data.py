@@ -66,7 +66,7 @@ def draw_circle(event, x, y, flags, param):
         if count % 3 == 1 or count == 0:
             pass
         else:
-            cv2.line(img, pt_list[count - 1], pt_list[count], color_dict[number2part[count]], 15)
+            cv2.line(img, pt_list[count - 1], pt_list[count], color_dict[number2part[count]], 5)
 
         count += 1
 
@@ -79,7 +79,7 @@ def key_check(k, char):
 
 
 if __name__ == "__main__":
-    # random.shuffle(jpeg_arr)
+    random.shuffle(jpeg_arr)
 
     for each in jpeg_arr:
         img_path = image_dir + each + ".jpg"
@@ -153,5 +153,5 @@ if __name__ == "__main__":
                 break
             elif k == 27:
                 exit(0)
-        
+
         cv2.destroyAllWindows()
