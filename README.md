@@ -11,7 +11,7 @@ pictures are split into 9 groups, each group has 500 images. [google drive](http
 
 ## How to mark
 * The order :
-    * Head -> spine(3 points) -> left hand(3 points) -> right hand(3 points) -> left leg(3 points) -> right leg(3 points)
+    * Head -> spine(3 points) -> left arm(3 points) -> right arm(3 points) -> left leg(3 points) -> right leg(3 points)
 
 * Keyboard
     * N : Next picture (You have to mark all points before going to next image)
