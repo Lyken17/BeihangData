@@ -31,6 +31,7 @@ color_dict = {
 number2part = ["head"] + ["spine"] * 3 + ["left_hand"] * 3 + ["right_hand"] * 3 + \
               ["left_leg"] * 3 + ["right_leg"] * 3
 
+total = 0
 count = 0
 pt_list = []
 stored_data = []
@@ -86,7 +87,9 @@ if __name__ == "__main__":
         if os.path.isfile(data_path):
             print "=========%s has been marked=========" % img_path
             continue
-        print "=========marking %s=========" % img_path
+
+        print "=========You have marked %s pictures, now marking %s=========" % (total, img_path)
+
         img = cv2.imread(img_path)
         cv2.namedWindow('image')
         cv2.setMouseCallback('image', draw_circle)
