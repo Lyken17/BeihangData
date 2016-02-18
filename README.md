@@ -7,10 +7,10 @@
     * Install opencv in Mac OS X ```brew install opencv```
 
 ## How to mark
-1. The order :
+* The order :
     * Head -> spine(3 points) -> left hand(3 points) -> right hand(3 points) -> left leg(3 points) -> right leg(3 points)
 
-2. Keyboard
+* Keyboard
     * N : Next picture (You have to mark all points before going to next image)
     * X : If this point is invisible
     * R : Re-mark the data (if you mark something wrong)
@@ -21,7 +21,7 @@
 1. Get python project and data set
     * ```git clone git@github.com:Lyken17/BeihangData.git```
     * [google drive](https://drive.google.com/folderview?id=0B3lu5NBSC7pVSV9hM1h5VTV3SW8&usp=sharing)
-    pictures are split into 21 groups, each group has 200 images.
+    pictures are split into 9 groups, each group has 500 images.
 2. Specify the image and label path
     There is an `config.json`. Set `image_dir` and `label_dir` to your own directory.
 3. Run code
@@ -37,7 +37,7 @@
         In[3]: test("myfile.jpg")
         ```
 
-2. 
+2.
 
 
 

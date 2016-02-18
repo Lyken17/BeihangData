@@ -17,7 +17,7 @@ random.shuffle(file_list)
 
 for i in xrange(len(file_list)):
     id = file_list[i]
-    group = i / 200
+    group = i / 500
     src_dir = os.path.join(image_dir, id)
     group_dir = os.path.join(des_dir, "data_set_" + str(group))
     aim_dir = os.path.join(group_dir, id)

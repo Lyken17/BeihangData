@@ -79,12 +79,16 @@ def key_check(k, char):
 
 
 if __name__ == "__main__":
-    random.shuffle(jpeg_arr)
+    # random.shuffle(jpeg_arr)
 
-    for each in jpeg_arr[:1]:
+    for each in jpeg_arr:
         img_path = image_dir + each + ".jpg"
         data_path = label_dir + each + ".json"
 
+        if os.path.isfile(data_path):
+            print "=========%s has been marked=========" % img_path
+            continue
+        print "=========marking %s=========" % img_path
         img = cv2.imread(img_path)
         cv2.namedWindow('image')
         cv2.setMouseCallback('image', draw_circle)
@@ -149,5 +153,5 @@ if __name__ == "__main__":
                 break
             elif k == 27:
                 exit(0)
-
+        
         cv2.destroyAllWindows()
