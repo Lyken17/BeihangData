@@ -35,6 +35,18 @@ def my_loop(array):
         yield array[i], array[i+1]
 
 
+def test(img="1.jpg"):
+    id = img.split('.')[0] if img.endswith(".jpg") else img
+    img_dir = os.path.join(image_dir,id + ".jpg")
+    data_dir = os.path.join(label_dir,id + ".json")
+    with open(data_dir) as fp:
+        img = cv2.imread(img_dir)
+        data = json.load(fp)
+
+    new_draw(img, img_dir, pts=data)
+
+
+
 def new_draw(img, img_dir, pts):
     global color_dict
 

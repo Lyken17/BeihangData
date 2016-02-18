@@ -60,7 +60,6 @@ def draw_circle(event, x, y, flags, param):
     if count > 15:
         return
     if event == cv2.EVENT_LBUTTONDOWN:  # click mouse
-        print x, y
         pt_list.append((x, y))
         cv2.circle(img, (x, y), 1, (170, 120, 0), 7)
 
