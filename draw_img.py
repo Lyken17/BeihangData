@@ -5,12 +5,20 @@ from generate_json import log_print
 
 image_dir = "Data/img/"
 label_dir = "Data/tmp/"
+with open("config.json", 'r+') as fp:
+    data = json.load(fp)
+    image_dir = data["image_dir"]
+    label_dir = data["label_dir"]
+
+if not os.path.isdir(image_dir) or not os.path.isdir(label_dir):
+    print ("image dir or label dir doesn't exist")
+    exit(-1)
 
 jpeg_arr = [each.split('.')[0] for each in (glob.glob1(image_dir, "*.jpg"))]
 json_arr = [each.split('.')[0] for each in (glob.glob1(label_dir, "*.json"))]
 
-print len(jpeg_arr)
-print len(json_arr)
+print "There are %d files end with .jpg in %s" % (len(jpeg_arr), image_dir)
+print "There are %d files end with .json in %s" % (len(label_dir), label_dir)
 
 color_dict = {
             "head" : (100, 100, 255),

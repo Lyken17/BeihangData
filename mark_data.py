@@ -1,15 +1,26 @@
-import os, sys
-import glob
+import os, sys, glob
+import json
 import cv2
 import numpy as np
 import random
 
 image_dir = "Data/img/"
-label_dir = "Data/labeled_label_txt/"
-label_json_dir = "Data/tmp/"
+label_dir = "Data/tmp/"
+with open("config.json", 'r+') as fp:
+    data = json.load(fp)
+    image_dir = data["image_dir"]
+    label_dir = data["label_dir"]
 
-jpg_arr = [each.split('.')[0] for each in (glob.glob1(image_dir, "*.jpg"))]
-txt_arr = [each.split('.')[0] for each in (glob.glob1(label_dir, "*.txt"))]
+if not os.path.isdir(image_dir) or not os.path.isdir(label_dir):
+    print ("image dir or label dir doesn't exist")
+    exit(-1)
+
+
+jpeg_arr = [each.split('.')[0] for each in (glob.glob1(image_dir, "*.jpg"))]
+json_arr = [each.split('.')[0] for each in (glob.glob1(label_dir, "*.json"))]
+
+print "There are %d files end with .jpg in %s" % (len(jpeg_arr), image_dir)
+print "There are %d files end with .json in %s" % (len(label_dir), label_dir)
 
 color_dict = {
     "spine": (170, 120, 0),
@@ -69,11 +80,11 @@ def key_check(k, char):
 
 
 if __name__ == "__main__":
-    random.shuffle(jpg_arr)
+    random.shuffle(jpeg_arr)
 
-    for each in jpg_arr[:1]:
+    for each in jpeg_arr[:1]:
         img_path = image_dir + each + ".jpg"
-        data_path = label_json_dir + each + ".json"
+        data_path = label_dir + each + ".json"
 
         img = cv2.imread(img_path)
         cv2.namedWindow('image')
@@ -100,7 +111,7 @@ if __name__ == "__main__":
             elif key_check(k, 'x'):
                 if count > 15:
                     continue
-                print ("x is pressed, joint is invisible")
+                print ("x is pressed, %s is invisible") % number2part[count]
                 pt_list.append((-1, -1))
                 count += 1
             elif key_check(k, 'r'):  # Re mark
@@ -110,7 +121,6 @@ if __name__ == "__main__":
                 img = cv2.imread(img_path)
             elif key_check(k, 'n'):  # Next mark
                 if count > 15:
-
                     data = {}
                     data["id"] = each
                     for i in xrange(len(pt_list)):
@@ -133,7 +143,12 @@ if __name__ == "__main__":
             elif key_check(k, 't'):
                 print img_path
                 print data_path
-            elif k == 27:
+            elif key_check(k, 's'):
+                print ("skip this picture")
+                pt_list = []
+                count = 0
                 break
+            elif k == 27:
+                exit(0)
 
         cv2.destroyAllWindows()
