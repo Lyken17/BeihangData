@@ -31,7 +31,7 @@ pictures are split into 9 groups, each group has 500 images. [google drive](http
     ```python mark_data```
 
 ## Sample
-![pic](http://i11.tietuku.com/05c454b68b94d738.png)
+![pic](https://cloud.githubusercontent.com/assets/7783214/13130814/d951852e-d59b-11e5-8451-bab13490edb1.png)
 
 ## PS
 1. How to examine my label result?
