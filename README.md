@@ -23,7 +23,7 @@ pictures are split into 9 groups, each group has 500 images. [google drive](http
 ## Procedure:
 1. Get python project and data set
     * ```git clone git@github.com:Lyken17/BeihangData.git```
-    * [google drive](https://drive.google.com/folderview?id=0B3lu5NBSC7pVSV9hM1h5VTV3SW8&usp=sharing)
+    * [google drive](https://drive.google.com/folderview?id=0B3lu5NBSC7pVTWhxeG1oVVV1bWM&usp=sharing)
     pictures are split into 9 groups, each group has 500 images.
 2. Specify the image and label path
     There is an `config.json`. Set `image_dir` and `label_dir` to your own directory.
