@@ -6,6 +6,9 @@
     * Install opencv in ubuntu ```sudo apt-get install libopencv```
     * Install opencv in Mac OS X ```brew install opencv```
 
+## Dataset
+pictures are split into 9 groups, each group has 500 images. [google drive](https://drive.google.com/folderview?id=0B3lu5NBSC7pVTWhxeG1oVVV1bWM&usp=sharing)
+
 ## How to mark
 * The order :
     * Head -> spine(3 points) -> left hand(3 points) -> right hand(3 points) -> left leg(3 points) -> right leg(3 points)
