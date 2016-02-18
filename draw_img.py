@@ -3,8 +3,6 @@ import glob, os
 import json, random
 from generate_json import log_print
 
-image_dir = "Data/img/"
-label_dir = "Data/tmp/"
 with open("config.json", 'r+') as fp:
     data = json.load(fp)
     image_dir = data["image_dir"]

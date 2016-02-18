@@ -4,8 +4,6 @@ import cv2
 import numpy as np
 import random
 
-image_dir = "Data/img/"
-label_dir = "Data/tmp/"
 with open("config.json", 'r+') as fp:
     data = json.load(fp)
     image_dir = data["image_dir"]
@@ -62,7 +60,7 @@ def draw_circle(event, x, y, flags, param):
     if event == cv2.EVENT_LBUTTONDOWN:  # click mouse
         pt_list.append((x, y))
         cv2.circle(img, (x, y), 1, (170, 120, 0), 7)
-
+        print "mark %dth point" % count
         if count % 3 == 1 or count == 0:
             pass
         else:
