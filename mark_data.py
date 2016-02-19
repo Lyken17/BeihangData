@@ -141,6 +141,7 @@ if __name__ == "__main__":
                     import json
                     with open(data_path, 'w+') as fp:
                         json.dump(data, fp, indent=2)
+                    total += 1
                     break
                 else:
                     print ("not enough joint")
