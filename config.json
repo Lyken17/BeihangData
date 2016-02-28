@@ -1,4 +1,4 @@
 {
-    "image_dir": "Data/img/",
-    "label_dir": "Data/tmp/"
+    "image_dir": "/Users/lykensyu/Documents/BeihangData/Data/split/data_set_7/",
+    "label_dir": "/Users/lykensyu/Downloads/data_set_7_label/"
 }

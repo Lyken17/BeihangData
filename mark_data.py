@@ -126,7 +126,7 @@ if __name__ == "__main__":
             elif key_check(k, 'n'):  # Next mark
                 if count > 15:
                     data = {}
-                    data["id"] = each
+                    data["img_id"] = each
                     for i in xrange(len(pt_list)):
                         part = number2part[i]
                         temp = {}

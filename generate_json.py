@@ -71,7 +71,7 @@ def extract_data(id, size, pts):
     data = {}
 
     # image name
-    data['id'] = id
+    data['img_id'] = id
 
     def inside(point, size):
         if point[0] <= 0 or point[0] > size[0] or point[1] <= 0 or point[1] > size[1]:

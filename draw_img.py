@@ -50,7 +50,7 @@ def new_draw(img, img_dir, pts):
 
     print img_dir
     for part in pts:
-        if part == "id":
+        if part == "img_id":
             continue
 
         print part
@@ -121,7 +121,8 @@ def old_draw(img, img_dir , pts, position_print=True):
 
 if __name__ == "__main__":
     random.shuffle(jpeg_arr)
-    for each in json_arr[:5]:
+    random.shuffle(json_arr)
+    for each in json_arr[:15]:
         if each not in jpeg_arr:
             continue
 
