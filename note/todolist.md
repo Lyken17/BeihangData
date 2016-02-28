@@ -14,7 +14,11 @@
 3.         
 
 
-image_arr_dir = "Data/image_arr.json"
-image_label_dir = "Data/image_label.json"
-image_type_dir = "Data/image_type.json"
-image_attribute_dir = "Data/image_attribute.json"
+# Necessary attribute
+    Placket1 衣襟1
+    Placket2 衣襟2
+SleeveLength 袖子长度
+CollarType
+ButtonType
+
+clothtype
