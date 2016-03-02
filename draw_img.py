@@ -131,6 +131,17 @@ def old_draw(img, img_dir, pts, position_print=True):
     cv2.destroyAllWindows()
 
 
+def draw_bbox(img, min, max):
+    x_min, y_min = min
+    x_max, y_max = max
+    color = (60, 80, 0)
+    width = 5
+    cv2.line(img, (x_min, y_min), (x_max, y_min), color, width)
+    cv2.line(img, (x_max, y_min), (x_max, y_max), color, width)
+    cv2.line(img, (x_max, y_max), (x_min, y_max), color, width)
+    cv2.line(img, (x_min, y_max), (x_min, y_min), color, width)
+    return img
+
 if __name__ == "__main__":
     random.shuffle(jpeg_arr)
     random.shuffle(json_arr)
